@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>BOOLEAN UX JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- FONT -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <!-- FB JS login sdk -->
+  <script src="//connect.facebook.net/en_US/all.js"></script>
+
+</head>
+
+<body>
+
+<div class="clearfix main profile" data-status="offline">
+
+  <div class="clearfix head">
+
+    <div class="col2">
+      <div class="head-info">
+        <p class="text-left font18"></p>
+      </div>
+    </div>
+
+    <div class="col2 text-right">
+      <button class="btn btn-fb btn-logOut abs-right" data-social="logOut" title="Log Out"><i class="fa fa-close" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+
+  <div class="mainContent">
+
+    <div class="clearfix text-center user-data mbs">
+
+      <div class="clearfix text-center user-img mvs">
+        <!-- User Default image if profile is empty -->
+        <img src="" alt="User Profile Pic"/>
+      </div>
+
+      <h1 class="user-name"></h1>
+      <h3 class="user-email"></h3>
+
+      <!-- TODO Ranking dinamico add en db-->
+      <h2 class="user-rank mts"></h2>
+
+      <h3 class="user-points mbs"></h3>
+
+      <div class="clearfix user-stats">
+
+        <div class="col2 text-center games">
+          <div class="title">Games<br>Success</div>
+          <div class="totals"></div>
+        </div>
+
+        <div class="col2 text-center battles">
+          <div class="title">Battles<br>Won · Lost</div>
+          <div class="totals"></div>
+        </div>
+        
+        <div class="clearfix mbxs"></div>
+
+        <div class="clearfix text-center">
+          <!--
+          <a href="/ranking" target="_self">SEE RANKING</a>
+          -->
+          <button class="btn btn-primary btn-fb btn-ranking ani-grow-m center-item">RANKING</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="clearfix controls challenges">
+      <!--
+      <div class="title text-center mbs">Challenges</div>
+      -->
+      <div class="clearfix bottom-btn">
+        
+        <div class="col2">
+          <!-- TODO Add disabled btns -->
+          <!--<a href="./battle" class="title text-center btn btn-battle disabled">BATTLE</a>-->
+          <a href="#" class="title text-center btn btn-battle disabled">BATTLE</a>
+        </div>
+
+        <div class="col2">
+          <a href="./game" class="title text-center btn btn-game enabled">GAME</a>
+        </div>
+
+      </div>
+
+      <!-- TODO ALERT RECEIVED MESSAGES / BATTLES -->
+      <div class="clearfix user-challenges"></div>
+
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+  <!--
+  <div class="printStatus"></div>
+  -->
+
+</div>
+
+<!-- OVERLAY INFO -->
+<div class="overlay">
+  <div class="content text-center">
+    <!-- TODO CLOSE OVERLAY -->
+    <!-- Resumen, Sure Quit?, etc.. -->
+  </div>
+</div>
+
+<script src="js/00_fibInit.js"></script>
+<script src="js/loadUser.js"></script>
+<!-- SOCKET IO -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/webSockets.js"></script>
+<!-- TEMPLATE JS -->
+<script src="js/profile.js"></script>
+
+</body>
+</html>

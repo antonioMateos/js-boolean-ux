@@ -1,0 +1,45 @@
+{
+  "name": "triangle-circle-square",
+  "version": "1.0.0",
+  "description": "Boolean UX JS Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "gulp default"
+  },
+  "keywords": [
+    "JS",
+    "Node",
+    "Circle",
+    "Triangle",
+    "Square",
+    "Boolean",
+    "UX",
+    "Grahovsky",
+    "Test"
+  ],
+  "author": "Grahovsky",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-nodemon": "^2.2.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "firebase": "^3.9.0",
+    "socket.io": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioMateos/js-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antonioMateos/js-project/issues"
+  },
+  "homepage": "https://github.com/antonioMateos/js-project#readme"
+}

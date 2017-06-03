@@ -1,0 +1,725 @@
+@import "reset.scss";
+
+/* CUSTOM CSS */
+// VARIABLES
+// Colors
+// Basic
+$black: #444;
+$white: #fff;
+$primary: #0f0;
+$secondary: #f00;
+$third: #00f;
+
+// Nice Colors
+$green: #096c74;
+
+// Social Colors
+$fbBlue: #3b5998;
+$fbGrey: #e9ebee;
+$fbBlack: #1d2129;
+
+// FB THEME COLORS
+$mainBG: $white;
+$mainColor: $fbBlue;
+$mainTxt: $mainColor;
+$logOut: $secondary;
+$secondaryBG: $fbBlue;
+$grey: $fbGrey;
+$black: $fbBlack;
+
+// STATUS COLORS
+$online: $primary;
+$offline: $fbGrey;
+$busy: $secondary;
+
+// Decoration
+$main-border: 4px;
+
+// ICON Font
+$iconFont: "Fontawesome";
+// END ICON Font
+
+// DEV STYLES --> Delete when finish
+.printStatus {
+
+	width: 100%;
+	padding: 20px;
+	margin: 20px auto;
+	clear: both;
+	background: #fff;
+	color: $black;
+	font-size: $font12;
+
+}
+
+/* END COLORS */
+
+* {
+
+}
+
+/* GRID */
+.clearfix {
+
+	width: 100%;
+	clear:both;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.fixed-top {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+
+}
+
+.center-item {
+
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+.col2 {
+
+	width: 50%;
+	float: left;
+	min-height: 1px;
+	height: 100%;
+
+}
+
+/* MAIN */
+.main {
+
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	overflow: hidden;
+
+	background: $mainBG;
+
+	&.landing {
+
+		height: 100vh;
+
+	}
+
+}
+
+.mainContent {
+
+	height: calc(100vh - 50px);
+	@extend .hide;
+
+}
+
+//BTNs
+.btn {
+
+	padding: 10px 15px;
+	border-radius: $main-border;
+	text-align: center;
+	width: 100%;
+	max-width: 300px;
+	font-size: $font10;
+	text-transform: uppercase;
+	border:0;
+	display: inherit;
+
+	&:hover {
+
+		cursor: pointer;
+
+	}
+
+	&.btn-primary {
+
+		background: $mainColor;
+		color: $white;
+
+	}
+
+	&.btn-fb {
+
+		background: $fbBlue;
+		color: white;
+
+	}
+
+	&.btn-edit {
+
+		background: none;
+		color: $mainColor;
+
+	}
+
+	&.btn-logOut {
+
+		background: none;
+		color: $logOut;
+
+	}
+
+}
+
+//LOGO
+.logo {
+
+	font-weight: $fw-bold;
+	font-size: $font15;
+	color: $mainTxt;
+
+}
+
+//LOGIN
+.login {
+
+	@include vertical-align;
+
+	.welcome {
+		color: $mainTxt;
+	}
+
+	.btn {
+		margin:0 auto;
+	}
+
+}
+
+//HEAD
+.head {
+
+	background: $secondaryBG;
+	color: $white;
+	height: 50px;
+	z-index: 10000;
+
+	.btn {
+
+		border-radius: 0;
+		font-size: $font18;
+		width: auto;
+		font-size: 1.5em;
+    	padding: 5px 15px 10px;
+    	color: $white;
+
+	}
+
+	.head-info {
+		padding: 5px 15px 10px;
+		font-weight: $fw-bold;
+	}
+
+}
+
+// SEARCH BAR
+.search {
+
+	width: 100%;
+	top: 50px;
+	border-bottom: 1px solid $grey;
+	height: 40px;
+	overflow: hidden;
+
+	&:after {
+
+	}
+
+	input[type="text"] {
+
+		font-size: $font10;
+		width: calc(100% - 50px);
+		padding: 0px 10px 0 0;
+		height: 40px;
+		border:0 none;
+
+		&:focus, &:active {
+
+			outline: 0 none !important;
+			border: 0 none !important;
+			color: $mainColor;
+
+		}
+
+	}
+
+	.btn-search {
+
+		width: 50px;
+		height: 40px;
+		border:0;
+		float: left;
+		background: $white;
+		color: $mainColor;
+
+		i {
+
+			position: relative;
+			margin-top: -10px;
+
+		}
+
+	}
+
+}
+
+// LISTS
+.items-list {
+
+	margin-top: 50px;
+
+	&.search-bar {
+
+		margin-top: 90px;
+
+	}
+
+	.item-list {
+
+		padding: 10px;
+		border-bottom: 1px solid $fbGrey;
+		display: inline-block;
+
+		margin-bottom: -5px;
+		border-left: 10px solid;
+
+	}
+
+}
+
+// USER DATA
+.user-data {
+
+	color: $mainColor;
+	background: $white;
+	padding-top: 10px;
+
+	position: relative;
+
+	.user-img {
+
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		border-radius: 50%;
+		
+		background: $mainColor;
+
+		border:0px solid $white;
+
+		img {
+
+			width: 100%;
+
+		}
+
+	}
+
+	.user-name {
+		font-weight: $fw-bold;
+		font-size: 1.5em;
+	}
+
+	.user-email {
+		font-size: 1em;
+		font-weight: normal;
+	}
+
+	.user-ranking {
+		color: $black;
+	}
+
+	.user-points {
+
+	}
+
+	.user-status {
+
+		&.online {
+
+
+		}
+
+	}
+
+	.user-stats {
+
+		background: $grey;
+		padding: 15px 0;
+
+		.title {
+
+			font-weight: $fw-bold;
+
+		}
+
+		.games {
+
+
+		}
+
+		.battles {
+
+
+		}
+
+	}
+
+}
+
+.user-status {
+
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 10000;
+
+	&.online {
+		background: $online;
+	}
+
+	&.offline {
+		background: $offline;
+	}
+
+	&.busy {
+		background: $busy;
+	}
+
+}
+
+//PROFILE
+.profile {
+
+	background: $grey;
+
+	.login {
+
+		position: relative;
+		//top: 260px;
+    	height: calc(100vh - 50px);
+
+	}
+
+	.user-data {
+
+		.user-img {
+			@extend .center-item;
+			text-align: center;
+		}
+
+		.user-points {
+			margin-bottom: 30px;
+		}
+
+	}
+
+	.user-challenges {
+
+		color: $mainColor;
+
+	}
+
+}
+
+.ranking {
+
+	.user-data {
+
+		border-left: 10px solid;
+
+		.user-img {
+
+			float: left;
+
+			width: 50px;
+			height: 50px;
+
+		}
+
+		.user-info {
+
+			float: left;
+			width: calc(100% - 62px);
+			margin-left: 10px;
+
+			overflow: hidden;
+
+			.user-name {font-size: 1em;}
+			.user-email {font-weight: normal;font-size: $font8;}
+			.user-rank {
+				float: left;
+				font-size: 1em;
+			}
+			.user-points {
+				float: left;
+				font-size: 1em;
+				color: $black;
+				margin-top: 5px;
+			}
+
+		}
+
+		&.online {border-left-color: $online;}
+
+		&.offline {border-left-color: $offline;}
+
+		&.busy {border-left-color: $busy;}
+
+	}
+
+}
+
+// BOTTOM CONTROLS
+.controls {
+
+	background: $white;
+	padding-top: 0px;
+    position: absolute;
+    bottom: 0px;
+    color: $mainColor;
+
+    .title {
+
+		font-weight: $fw-bold;
+		font-size: $font15;
+
+	}
+
+	.bottom-btn {
+
+		.btn {
+
+			padding: 30px 0;
+			border-radius: 0;
+			max-width: 100%;
+			color: $mainColor;
+			background: $white;
+
+			&:hover, &:focus, &.active {
+
+				cursor: pointer;
+				background: $mainColor;
+				color: $white;
+
+				.shape {
+					background: $white;
+				}
+
+			}
+
+			&.disabled {
+
+				color: #ccc;
+
+				&:hover, &:focus, &.active {
+
+					cursor: initial;
+					background: $white;
+				}
+
+			}
+
+			&.btn-battle {}
+
+
+			&.btn-game {}
+
+			.shape {
+
+				width: 50px;
+				height: 50px;
+				background: $mainColor;
+				margin:0 auto;
+
+				&.circle {
+					border-radius: 50%;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+//GAME
+.header {
+
+	height: 10vh;
+	background: $secondary;
+
+	.user-info {
+
+		background: rgba($third,0.4);
+		color: white;
+		padding: $dm;
+
+		.user-avatar {
+
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: #0f0;
+			float: left;
+
+		}
+
+		.user-data {
+
+			width: calc(100% - 85px);
+			float: left;
+			margin-left: $ds;
+
+			.user-name {
+
+				font-size: $font15;
+
+			}
+
+			.user-ranking {
+
+				font-size: $font20;
+
+			}
+
+		}
+
+	}
+
+}
+
+.game {
+
+	.play {
+
+		background: $grey;
+		padding-top: 0;
+		height: calc(100vh - 143px);
+
+		.shapeWrapper {
+
+			@include vertical-align;
+
+			width: 90%;
+			margin: 0 auto;
+			padding: 3% 0 16%;
+			background: $white;
+			height: auto;
+			top:calc(50% - 5px);
+
+			.shapeIntro {
+				transform: scale(0, 0);
+			    transition: transform .2s cubic-bezier(0.53, 0.01, 0.2, 1);
+
+				&.show {
+					transform: scale(1, 1);
+					transition: transform .2s cubic-bezier(0.53, 0.01, 0.2, 1);
+				}
+			}
+
+			.shape {
+
+				margin: 0 auto;
+				background: $mainColor;
+				width: 150px;
+				height: 150px;
+				transition: all .3s ease;
+
+				&.circle {
+
+					border-radius: 50%;
+					transition: border-radius .3s ease;
+
+				}
+
+			}
+
+		}
+
+		.shapeType {
+
+			width: 90%;
+			margin: 0 auto;
+			background: $white;
+			color: $mainColor;
+			padding-top: 13px;
+			padding-bottom: 15px;
+			text-transform: uppercase;
+
+		}
+
+	}
+
+	.controls {
+
+		.btn {
+
+			transition: all .2s ease;
+
+			&.success {
+
+				background: $primary;
+				color: $mainColor;
+
+			}
+
+			&.fail {
+
+				background: $secondary;
+				color: $white;
+
+			}
+
+		}
+
+	}
+
+}
+
+//OVERLAY
+.overlay {
+
+	background: $white;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+	transform: scale(0, 0);
+    transition: transform .5s cubic-bezier(0.53, 0.01, 0.2, 1);
+
+	.content {
+
+		@include vertical-align;
+
+		color: $mainColor;
+		width: 90%;
+		margin: 0 auto;
+
+		.btn {
+
+		}
+
+	}
+
+}
+
+.hide {
+	transform: scale(0,0);
+}
+
+.show {
+	transform: scale(1, 1);
+	transition: transform .5s cubic-bezier(0.53, 0.01, 0.2, 1);
+}

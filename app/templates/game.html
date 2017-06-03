@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>BOOLEAN UX JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- FONT -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <!-- FB JS login sdk -->
+  <script src="//connect.facebook.net/en_US/all.js"></script>
+
+</head>
+
+<body>
+
+<div class="clearfix main game">
+
+  <div class="clearfix head">
+
+    <div class="col2">
+
+      <div class="head-info">
+        <p class="text-left font18"></p>
+      </div>
+
+    </div>
+
+    <div class="col2 text-right">
+      <button class="btn btn-fb btn-Stop abs-right" title="STOP GAME"><i class="fa fa-close" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+
+  <div class="clearfix user-data play">
+
+    <!-- PLAY -->
+    <div class="clearfix shapeWrapper">
+
+      <div class="clearfix shapeType">
+
+        <p class="text-center font20"></p>
+
+      </div>
+
+      <div class="shapeIntro">
+        <div class="shape">
+          <!-- SHAPE -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="clearfix controls">
+
+    <div class="clearfix bottom-btn">
+        
+      <div class="col2">
+        <button class="title text-center btn btn-circle">
+          <div class="shape circle"></div>
+        </button>
+      </div>
+
+      <div class="col2">
+        <button class="title text-center btn btn-square">
+          <div class="shape square"></div>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+<!--
+<div class="printStatus"></div>
+-->
+
+</div>
+
+<!-- OVERLAY INFO -->
+<div class="overlay">
+  <div class="content text-center">
+    <!-- TODO CLOSE OVERLAY -->
+    <!-- Resumen, Sure Quit?, etc.. -->
+  </div>
+</div>
+
+<script src="js/00_fibInit.js"></script>
+<script src="js/loadUser.js"></script>
+<!-- SOCKET IO -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/webSockets.js"></script>
+<!-- TEMPLATE JS -->
+<script src="js/game.js"></script>
+
+</body>
+</html>

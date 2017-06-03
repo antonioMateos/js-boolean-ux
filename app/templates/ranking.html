@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>USER BOOLEAN UX JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- FONT -->
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="../css/custom.css" />
+
+</head>
+
+<body>
+
+<div class="clearfix main">
+
+<div class="clearfix head fixed-top">
+
+  <div class="col2">
+    <a href="./profile" class="btn btn-fb btn-back abs-left" title="Back to my profile"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="col2 text-right">
+    <button class="btn btn-fb btn-logOut abs-right" data-social="logOut" title="Log Out"><i class="fa fa-close" aria-hidden="true"></i></button>
+  </div>
+
+  <div class="clearfix"></div>
+
+</div>
+
+<div class="clearfix search fixed-top">
+  <button class="btn-search"><i class="fa fa-search fa-2x"></i></button>
+  <input type="text" placeholder="Buscar usuarios" />
+</div>
+
+<div class="items-list search-bar ranking">
+
+  <!-- AQUI VA LA LISTA DE USERS -->
+
+</div>
+
+<!--
+<div class="printStatus"></div>
+-->
+
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<!-- FB JS login sdk -->
+<script src="//connect.facebook.net/en_US/all.js"></script>
+<script src="../js/00_fibInit.js"></script>
+<script src="../js/loadUser.js"></script>
+<!-- SOCKET IO -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="../js/webSockets.js"></script>
+<!-- TEMPLATE JS -->
+<script src="../js/ranking.js"></script>
+
+<!-- DUMMY Fn FOR DUMMY USERS -->
+<script src="js/dummyFunctions.js"></script>
+
+</body>
+</html>
