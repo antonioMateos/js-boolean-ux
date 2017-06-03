@@ -15,4 +15,4 @@ npm run start
 #### Notes
 ------
 * Firebase APP **needed** -> fibConfig.js
-* Firebase Credentials file **needed** -> <firebase-project-name>+<your key>.json
+* Firebase Credentials file **needed** -> firebase-project-name + yourKey.json
