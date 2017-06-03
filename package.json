@@ -36,10 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antonioMateos/js-project.git"
+    "url": "git+https://github.com/antonioMateos/js-project-ux.git"
   },
   "bugs": {
-    "url": "https://github.com/antonioMateos/js-project/issues"
-  },
-  "homepage": "https://github.com/antonioMateos/js-project#readme"
+    "url": "https://github.com/antonioMateos/js-project-ux/issues"
+  }
 }
