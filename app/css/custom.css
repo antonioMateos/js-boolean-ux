@@ -360,6 +360,7 @@ button {
   text-transform: uppercase;
   border: 0;
   display: inherit;
+  border: 2px solid transparent;
 }
 
 .btn:hover {
@@ -374,6 +375,12 @@ button {
 .btn.btn-fb {
   background: #3b5998;
   color: white;
+}
+
+.btn.btn-git {
+  background: #fff;
+  color: #1d2129;
+  border-color: #1d2129;
 }
 
 .btn.btn-edit {

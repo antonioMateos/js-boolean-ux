@@ -66,10 +66,19 @@ function loadUI(template){
 
 	if(template === "login"){
 
+		// FIX TO DELEGATE EVENTS
 		var logInBtn = document.querySelector(".btn-logIn");
 
 		logInBtn.addEventListener("click" , cb => {
 			var from = logInBtn.getAttribute("data-social");
+			console.log("Log me in!");
+			signIn(from);
+		});
+
+		var logInGit = document.querySelector(".btn-git");
+
+		logInGit.addEventListener("click" , cb => {
+			var from = logInGit.getAttribute("data-social");
 			console.log("Log me in!");
 			signIn(from);
 		});
@@ -107,13 +116,35 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Sign In
 function signIn(socialMedia){
 
+	var provider;
+
 	// FB LOGIN
 	if(socialMedia === "Facebook") {
 
 		console.log("Login with:",socialMedia);
 
 		// CREATE INSTANCE OBJECT FACEBOOK PROVIDER
-		var provider = new firebase.auth.FacebookAuthProvider();
+		provider = new firebase.auth.FacebookAuthProvider();
+
+		fibAuth(provider);
+
+	};
+	// END FB LOGIN
+
+	// GIT LOGIN
+	if(socialMedia === "Github") {
+
+		console.log("Login with:",socialMedia);
+
+		// CREATE INSTANCE OBJECT GITHUB PROVIDER
+		provider = new firebase.auth.GithubAuthProvider();
+
+		fibAuth(provider);
+
+	};
+	// END GIT LOGIN
+
+	function fibAuth(provider){
 
 		// ADDITIONAL SCOPES
 		provider.addScope('public_profile');
@@ -146,7 +177,6 @@ function signIn(socialMedia){
 		});
 
 	};
-	// END FB LOGIN
 
 };
 

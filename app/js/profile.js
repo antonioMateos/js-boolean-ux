@@ -161,7 +161,15 @@ profile = (function(){
 		var totalPlays = userInfo.games.success + userInfo.games.fails;
 		var winPlays = userInfo.games.success;
 		var winPerc = winPlays/totalPlays;
+
 		winPerc = winPerc.toFixed(2);
+
+		// ISSUE WHEN USER INIT
+		if(winPerc === NaN){
+			winPerc=0;
+			console.log("NAN");
+		}
+
 		userGames.innerHTML = winPerc+" %";
 
 		//USER BATTLES 	  -> .user-stats .battles

@@ -130,6 +130,7 @@ $iconFont: "Fontawesome";
 	text-transform: uppercase;
 	border:0;
 	display: inherit;
+	border:2px solid transparent;
 
 	&:hover {
 
@@ -149,6 +150,12 @@ $iconFont: "Fontawesome";
 		background: $fbBlue;
 		color: white;
 
+	}
+
+	&.btn-git {
+		background: $white;
+		color: $black;
+		border-color: $black;
 	}
 
 	&.btn-edit {

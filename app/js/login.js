@@ -28,13 +28,35 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Sign In
 function signIn(socialMedia){
 
+	var provider;
+
 	// FB LOGIN
 	if(socialMedia === "Facebook") {
 
 		console.log("Login with:",socialMedia);
 
 		// CREATE INSTANCE OBJECT FACEBOOK PROVIDER
-		var provider = new firebase.auth.FacebookAuthProvider();
+		provider = new firebase.auth.FacebookAuthProvider();
+
+		fibAuth(provider);
+
+	};
+	// END FB LOGIN
+
+	// GIT LOGIN
+	if(socialMedia === "Github") {
+
+		console.log("Login with:",socialMedia);
+
+		// CREATE INSTANCE OBJECT GITHUB PROVIDER
+		provider = new firebase.auth.GithubAuthProvider();
+
+		fibAuth(provider);
+
+	};
+	// END GIT LOGIN
+
+	function fibAuth(provider){
 
 		// ADDITIONAL SCOPES
 		provider.addScope('public_profile');
@@ -67,7 +89,6 @@ function signIn(socialMedia){
 		});
 
 	};
-	// END FB LOGIN
 
 };
 
